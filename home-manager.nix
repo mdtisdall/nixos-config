@@ -26,6 +26,25 @@
     pinentryFlavor = "qt";
   };
 
+  programs.alacritty = {
+    enable = true;
+
+    settings = {
+      key_bindings = [
+        {
+          key = "C";
+          mods = "Control";
+          action = "Copy";
+        }
+        {
+          key = "V";
+          mods = "Control";
+          action = "Paste";
+        }
+      ];
+    };
+  };
+
   home.packages = with pkgs; [
     gnupg
     git-crypt
@@ -33,6 +52,7 @@
     freerdp
     firefox
     xorg.xev
+    xclip
   ];
 
 

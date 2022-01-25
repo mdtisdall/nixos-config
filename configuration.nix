@@ -39,7 +39,23 @@
   # };
 
   # Enable the X11 windowing system.
-  # services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+    layout = "us";
+
+    desktopManager = {
+      xterm.enable = false;
+    };
+
+    displayManager = {
+      defaultSession = "none+xmonad";
+      lightdm.enable = true;
+    };
+
+    windowManager = {
+      xmonad.enable = true;
+    };
+  };
 
 
   
@@ -106,6 +122,9 @@
   system.stateVersion = "21.11"; # Did you read the comment?
 
   services.qemuGuest.enable = true;
+
+  systemd.services.qemu-guest-agent.path = [ pkgs.shadow ];
+
   services.spice-vdagentd.enable = true;
 }
 

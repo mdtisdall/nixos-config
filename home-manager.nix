@@ -30,7 +30,13 @@
     gnupg
     git-crypt
     pinentry_qt
+    freerdp
+    firefox
+    xorg.xev
   ];
+
+
+
 
   programs.home-manager.enable = true;
 

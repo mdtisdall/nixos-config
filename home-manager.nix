@@ -15,6 +15,7 @@
     userEmail = "mtisdall@pennmedicine.upenn.edu";
     extraConfig.core.editor = "vim";
     extraConfig.diff.tool = "vimdiff";
+    extraConfig.difftool.prompt = false;
   };
 
   programs.gpg = {
@@ -57,6 +58,7 @@
     firefox
     xorg.xev
     xclip
+    kitty
   ];
 
   xsession.windowManager.xmonad = {
@@ -64,7 +66,7 @@
     config = pkgs.writeText "xmonad.hs" ''
       import XMonad
       main = xmonad defaultConfig {
-        terminal = "alacritty"
+        terminal = "kitty"
       }
     '';
   };

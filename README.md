@@ -1,4 +1,4 @@
-nixos-config
+# nixos-config
 
 Configuration scripts/etc for setting up nixos system under UTM (qemu).
 

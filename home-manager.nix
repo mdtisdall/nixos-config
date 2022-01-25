@@ -42,6 +42,10 @@
           action = "Paste";
         }
       ];
+
+      env = {
+        WINIT_X11_SCALE_FACTOR = "1";
+      };
     };
   };
 
@@ -55,7 +59,15 @@
     xclip
   ];
 
-
+  xsession.windowManager.xmonad = {
+    enable = true;
+    config = pkgs.writeText "xmonad.hs" ''
+      import XMonad
+      main = xmonad defaultConfig {
+        terminal = "alacritty"
+      }
+    '';
+  };
 
 
   programs.home-manager.enable = true;

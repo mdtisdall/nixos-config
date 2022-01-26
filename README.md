@@ -12,10 +12,7 @@ https://www.youtube.com/playlist?list=PL-saUBvIJzOkjAw_vOac75v-x6EzNzZq-
 
 ## Mount the host user account onto the guest
 
-`mkdir ~/host`
-
-`sshfs dylan@192.168.1.249: ~/host -o idmap=user,follow_symlinks`
-
-`fusermount -u ~/host`
+`./mount-host.sh` will mount the host at `~/host`.
+`./ummount-host.sh` will unmount the host from `~/host`.
 
 Note that, to access most of your home directory via this mount, you need to enable "Allow full disk access for remote users" in the "Remote Login" preferences on the host Mac.

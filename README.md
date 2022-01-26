@@ -10,3 +10,8 @@ and by the "NixOS" YouTube series by Wil T:
 
 https://www.youtube.com/playlist?list=PL-saUBvIJzOkjAw_vOac75v-x6EzNzZq-
 
+## Mount the host user account onto the gues
+
+`sshfs dylan@192.168.1.249: ~/host -o idmap=user,follow_symlinks`
+
+Still trying to resolve permissions issues with some of the default directories on the Mac host (e.g., ~/Documents)

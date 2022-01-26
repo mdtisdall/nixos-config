@@ -89,6 +89,7 @@
   #   wget
   #   firefox
     cifs-utils
+    sshfs
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

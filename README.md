@@ -10,7 +10,7 @@ and by the "NixOS" YouTube series by Wil T:
 
 https://www.youtube.com/playlist?list=PL-saUBvIJzOkjAw_vOac75v-x6EzNzZq-
 
-## Mount the host user account onto the gues
+## Mount the host user account onto the guest
 
 `mkdir ~/host`
 
@@ -18,4 +18,4 @@ https://www.youtube.com/playlist?list=PL-saUBvIJzOkjAw_vOac75v-x6EzNzZq-
 
 `fusermount -u ~/host`
 
-Still trying to resolve permissions issues with some of the default directories on the Mac host (e.g., ~/Documents)
+Note that, to access most of your home directory via this mount, you need to enable "Allow full disk access for remote users" in the "Remote Login" preferences on the host Mac.

@@ -4,57 +4,60 @@
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
+      vim-sensible
       vim-airline
       vim-fugitive 
+      vim-surround
+      vim-commentary
+      vim-sleuth
+      vim-pencil
     ];
     extraConfig = ''
-      filetype plugin indent on
-      set nocompatible
-      set modelines=0
-      set nocompatible
+      "filetype plugin indent on
+      "set nocompatible
+      "set modelines=0
+      "set nocompatible
 
-      set modelines=0
+      "set modelines=0
 
-      set encoding=utf-8
-      set scrolloff=3
-      set autoindent
-      set showmode
-      set showcmd
-      set hidden
-      set wildmenu
-      set wildmode=list:longest
-      set visualbell
-      set cursorline
-      set ttyfast
-      set ruler
-      set backspace=indent,eol,start
-      set laststatus=2
-      set relativenumber
-      set undofile
+      "set encoding=utf-8
+      "set scrolloff=3
+      "set autoindent
+      "set showmode
+      "set showcmd
+      "set hidden
+      "set wildmenu
+      "set wildmode=list:longest
+      "set visualbell
+      "set cursorline
+      "set ttyfast
+      "set ruler
+      "set backspace=indent,eol,start
+      "set laststatus=2
+      set number relativenumber
+      "set undofile
 
-      set ignorecase
-      set smartcase
+      "set ignorecase
+      "set smartcase
 
-      set wrap
-      set textwidth=0
-      set formatoptions=qrn1
-      set colorcolumn=80
-      set linebreak
+      "set wrap
+      "set textwidth=0
+      "set formatoptions=qrn1
+      "set colorcolumn=80
+      "set linebreak
 
-      set makeprg=make
+      "set makeprg=make
 
-      set tabstop=2 softtabstop=0 expandtab shiftwidth=2
+      "nnoremap <leader><space> :noh<cr>
+      "nnoremap <tab> %
+      "vnoremap <tab> %
 
-      nnoremap <leader><space> :noh<cr>
-      nnoremap <tab> %
-      vnoremap <tab> %
-
-      noremap <up> <nop>
-      noremap <down> <nop>
-      noremap <left> <nop>
-      noremap <right> <nop>
-      noremap j gj
-      noremap k gk
+      "noremap <up> <nop>
+      "noremap <down> <nop>
+      "noremap <left> <nop>
+      "noremap <right> <nop>
+      "noremap j gj
+      "noremap k gk
 
       syntax on
       "set statusline+=%{FugitiveStatusline()}"
@@ -110,9 +113,12 @@
     firefox
     xorg.xev
     xclip
-    kitty
 #    _1password
   ];
+
+  programs.kitty = {
+    enable = true;
+  };
 
   xsession.windowManager.xmonad = {
     enable = true;

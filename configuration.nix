@@ -90,6 +90,8 @@
   #   firefox
     cifs-utils
     sshfs
+    davfs2
+    rclone
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -128,5 +130,7 @@
   systemd.services.qemu-guest-agent.path = [ pkgs.shadow ];
 
   services.spice-vdagentd.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
 }
 

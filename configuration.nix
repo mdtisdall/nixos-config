@@ -90,8 +90,10 @@
   #   firefox
     cifs-utils
     sshfs
-    davfs2
+    #davfs2
     rclone
+    openconnect
+    freerdp
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

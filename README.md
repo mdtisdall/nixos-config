@@ -22,6 +22,6 @@ Note that, to access most of your home directory via this mount, you need to ena
 
 `rclone config` will configure a box.com account. I think this only needs to be done once, but can't see how to make it part of the nixos configuration.
 
-`rclone mount :box ~/box.com` will mount the box.com account at `~/box.com`.
+`rclone mount Box: ~/box.com` will mount the box.com account at `~/box.com`.
 `fusermount -u ~/box.com` will unmount the box.com account at `~/box.com`.
 

@@ -6,7 +6,7 @@ xrandr --newmode ${modeline}
 modename=$(echo $modeline | awk '{ print $1; }')
 xrandr --addmode Virtual-1 $modename
 
-modeline=$(cvt -v 3024 1964 | grep Modeline | sed -e "s/Modeline //")
+modeline=$(cvt -v 3024 1890 | grep Modeline | sed -e "s/Modeline //")
 echo $modeline
 xrandr --newmode ${modeline}
 modename=$(echo $modeline | awk '{ print $1; }')

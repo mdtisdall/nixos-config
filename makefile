@@ -1,7 +1,7 @@
 # Connectivity info for Linux VM
 NIXADDR ?= unset
 NIXPORT ?= 22
-NIXUSER ?= dylan 
+NIXUSER ?= dylan
 
 # The block device prefix to use.
 NIXBLOCKDEVICE ?= vda
@@ -57,3 +57,8 @@ vm/copy:
 		--exclude='iso/' \
 		--rsync-path="sudo rsync" \
 		$(MAKEFILE_DIR)/ $(NIXUSER)@$(NIXADDR):~/nixos-config
+vm/secrets:
+	#SSH Keys
+	rsync -av -e 'ssh $(SSH_OPTIONS) -p$(NIXPORT)' \
+		--exclude='environment/' \
+		$(HOME)/.ssh/ $(NIXUSER)@$(NIXADDR):~/.ssh

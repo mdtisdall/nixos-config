@@ -105,7 +105,7 @@
     config = pkgs.writeText "xmonad.hs" ''
       import XMonad
       main = xmonad defaultConfig {
-        terminal = "kitty"
+        terminal = "LIBGL_ALWAYS_SOFTWARE=1 kitty"
       }
     '';
   };

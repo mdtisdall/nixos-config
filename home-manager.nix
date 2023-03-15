@@ -68,6 +68,10 @@
     enable = true;
     userName = "Dylan Tisdall";
     userEmail = "mtisdall@pennmedicine.upenn.edu";
+    ignores = [ 
+      "*.swp"
+      "*.swo"
+    ];
     extraConfig.core.editor = "vim";
     extraConfig.diff.tool = "vimdiff";
     extraConfig.difftool.prompt = false;

@@ -35,7 +35,24 @@
       "set backspace=indent,eol,start
       "set laststatus=2
       set number relativenumber
-      "set undofile
+
+      set undofile
+      set backup
+      set swapfile
+      set undodir=$HOME/.vim/tmp/undo
+      set backupdir=$HOME/.vim/tmp/backup
+      set directory=$HOME/.vim/tmp/swap
+
+      " Make those folders automatically if they don't already exist.
+      if !isdirectory(expand(&undodir))
+          call mkdir(expand(&undodir), "p")
+      endif
+      if !isdirectory(expand(&backupdir))
+          call mkdir(expand(&backupdir), "p")
+      endif
+      if !isdirectory(expand(&directory))
+          call mkdir(expand(&directory), "p")
+      endif
 
       "set ignorecase
       "set smartcase
@@ -56,8 +73,8 @@
       "noremap <down> <nop>
       "noremap <left> <nop>
       "noremap <right> <nop>
-      "noremap j gj
-      "noremap k gk
+      noremap j gj
+      noremap k gk
 
       syntax on
       "set statusline+=%{FugitiveStatusline()}"

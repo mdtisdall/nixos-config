@@ -1,6 +1,8 @@
 { pkgs }:
 
 {
+  home.stateVersion = "23.05";
+
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
@@ -104,8 +106,8 @@
     enable = true;
     config = pkgs.writeText "xmonad.hs" ''
       import XMonad
-      main = xmonad defaultConfig {
-        terminal = "kitty"
+      main = xmonad def {
+        terminal = "LIBGL_ALWAYS_SOFTWARE=1 kitty"
       }
     '';
   };

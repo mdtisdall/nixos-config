@@ -1,7 +1,7 @@
 { pkgs }:
 
 {
-  home.stateVersion = "23.05";
+  home.stateVersion = "23.11";
 
   programs.vim = {
     enable = true;
@@ -15,54 +15,8 @@
       vim-pencil
     ];
     extraConfig = ''
-      "filetype plugin indent on
-      "set nocompatible
-      "set modelines=0
-      "set nocompatible
-
-      "set modelines=0
-
-      "set encoding=utf-8
-      "set scrolloff=3
-      "set autoindent
-      "set showmode
-      "set showcmd
-      "set hidden
-      "set wildmenu
-      "set wildmode=list:longest
-      "set visualbell
-      "set cursorline
-      "set ttyfast
-      "set ruler
-      "set backspace=indent,eol,start
-      "set laststatus=2
       set number relativenumber
-      "set undofile
-
-      "set ignorecase
-      "set smartcase
-
-      "set wrap
-      "set textwidth=0
-      "set formatoptions=qrn1
-      "set colorcolumn=80
-      "set linebreak
-
-      "set makeprg=make
-
-      "nnoremap <leader><space> :noh<cr>
-      "nnoremap <tab> %
-      "vnoremap <tab> %
-
-      "noremap <up> <nop>
-      "noremap <down> <nop>
-      "noremap <left> <nop>
-      "noremap <right> <nop>
-      "noremap j gj
-      "noremap k gk
-
       syntax on
-      "set statusline+=%{FugitiveStatusline()}"
       '';
   };
 
@@ -87,7 +41,7 @@
   home.packages = with pkgs; [
     gnupg
     git-crypt
-    pinentry_qt
+    pinentry-qt
     freerdp
     firefox
     xorg.xev
